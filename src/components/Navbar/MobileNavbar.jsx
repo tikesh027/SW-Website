@@ -1,77 +1,67 @@
-import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
+import React, { useState } from 'react';
+import { FaBars, FaSearch } from 'react-icons/fa';
+import Link from 'next/link';
 
-export default function MobileNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+const MobileNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand>
-          <p className="font-bold text-inherit">Damn</p>
-        </NavbarBrand>
-      </NavbarContent>
+    <nav className="flex justify-between items-center p-4 bg-green-700 text-white">
+      {/* Menu Icon */}
+      <div onClick={toggleMenu} className="cursor-pointer">
+        <FaBars />
+      </div>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
+      {/* Logo */}
+      <div className="flex-grow text-center">
+        <img src="/logo.png" alt="Logo" className="h-8 mx-auto" /> {/* Adjust the logo path */}
+      </div>
+
+      {/* Search Icon */}
+      <div className="cursor-pointer">
+        <FaSearch />
+      </div>
+
+      {/* Menu Links */}
+      <div
+        className={`${
+          isOpen ? 'block' : 'hidden'
+        } md:flex md:items-center md:justify-between md:w-auto w-full`}
+      >
+        <ul className="flex flex-col md:flex-row md:items-center md:space-x-6 text-white">
+          <li>
+            <Link href="/micro-organisms" legacyBehavior>
+              <a>Micro-Organisms</a>
             </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
+          </li>
+          <li>
+            <Link href="/biology" legacyBehavior>
+              <a>Biology</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/physics" legacyBehavior>
+              <a>Physics</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/chemistry" legacyBehavior>
+              <a>Chemistry</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/mcqs" legacyBehavior>
+              <a>MCQs</a>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
-}
+};
+
+export default MobileNavbar;
