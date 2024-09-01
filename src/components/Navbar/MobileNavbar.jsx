@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaBars, FaSearch } from 'react-icons/fa';
+import { FaBars, FaSearch, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
 
 const MobileNavbar = () => {
@@ -9,53 +9,64 @@ const MobileNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <nav className="flex justify-between items-center p-4 bg-green-700 text-white">
-      {/* Menu Icon */}
-      <div onClick={toggleMenu} className="cursor-pointer">
-        <FaBars />
+    <nav className="flex justify-between items-center p-4 bg-green-700 text-white fixed top-0 left-0 w-full z-50">
+
+      <div className="md:hidden" onClick={toggleMenu}>
+        <FaBars className="cursor-pointer" />
       </div>
 
-      {/* Logo */}
+
       <div className="flex-grow text-center">
-        <img src="/logo.png" alt="Logo" className="h-8 mx-auto" /> {/* Adjust the logo path */}
+        <Link href="/" legacyBehavior>
+          <a>
+            <img src="/logo.png" alt="Logo" className="h-8 mx-auto" />
+          </a>
+        </Link>
       </div>
 
-      {/* Search Icon */}
-      <div className="cursor-pointer">
-        <FaSearch />
+
+      <div className="flex items-center space-x-4">
+        <FaSearch className="cursor-pointer" />
       </div>
 
-      {/* Menu Links */}
+
       <div
-        className={`${
-          isOpen ? 'block' : 'hidden'
-        } md:flex md:items-center md:justify-between md:w-auto w-full`}
+        className={`transform top-0 left-0 h-screen w-full bg-green-700 fixed z-40 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
-        <ul className="flex flex-col md:flex-row md:items-center md:space-x-6 text-white">
+        <div className="flex justify-between items-center p-4">
+
+          <FaTimes className="cursor-pointer text-white" onClick={closeMenu} />
+        </div>
+        <ul className="flex flex-col items-center space-y-4 p-4">
           <li>
             <Link href="/micro-organisms" legacyBehavior>
-              <a>Micro-Organisms</a>
+              <a onClick={closeMenu}>Micro-Organisms</a>
             </Link>
           </li>
           <li>
             <Link href="/biology" legacyBehavior>
-              <a>Biology</a>
+              <a onClick={closeMenu}>Biology</a>
             </Link>
           </li>
           <li>
             <Link href="/physics" legacyBehavior>
-              <a>Physics</a>
+              <a onClick={closeMenu}>Physics</a>
             </Link>
           </li>
           <li>
             <Link href="/chemistry" legacyBehavior>
-              <a>Chemistry</a>
+              <a onClick={closeMenu}>Chemistry</a>
             </Link>
           </li>
           <li>
             <Link href="/mcqs" legacyBehavior>
-              <a>MCQs</a>
+              <a onClick={closeMenu}>MCQs</a>
             </Link>
           </li>
         </ul>
