@@ -1,10 +1,13 @@
 import Image from "next/image";
-import Navbar from '../components/Navbar/index'
+import Navbar from "../components/Navbar/index";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-         <Navbar/>
+    <main>
+      <div className="w-full h-[100px] bg-white flex justify-center text-2xl">
+        ADS
+      </div>
+      <div className="z-10 items-center justify-between font-mono text-sm">
+        <Navbar />
       </div>
     </main>
   );
