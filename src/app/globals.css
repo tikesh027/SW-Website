@@ -32,3 +32,25 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Custom dropdown styles */
+.custom-dropdown .rs-dropdown-toggle {
+  background-color: #c6f6d5; /* Tailwind's bg-green-200 */
+  color: black; /* Adjust text color if needed */
+  font-size: 24px;
+}
+
+.custom-dropdown .rs-dropdown-menu {
+  background-color: #d1fae5; /* Tailwind green-200 */
+}
+
+.custom-dropdown .rs-dropdown-menu-item {
+  background-color: #d1fae5; /* Tailwind green-200 */
+  color: #000; /* Optional: change text color to black for better contrast */
+  text-decoration: none; /* Ensure text decoration is none */
+}
+
+.custom-dropdown .rs-dropdown-menu-item:hover {
+  background-color: #a7f3d0; /* Tailwind green-300 for hover effect */
+  color: #000; /* Ensure text color remains black on hover if needed */
+}
