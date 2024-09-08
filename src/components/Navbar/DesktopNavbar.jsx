@@ -11,7 +11,7 @@ import Image from "next/image";
 import logo from "../assets/logo.png";
 import { FaSearch } from "react-icons/fa";
 import "../../app/globals.css";
-import CustomDropdown from "./Dropdown";
+import CustomDropdown from "./DropdownComponent";
 
 export default function App() {
   const microbiologyItems = [

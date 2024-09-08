@@ -46,7 +46,7 @@ const Category = () => {
         <div className="grid grid-cols-3 gap-10">
           <div className="flex flex-col border-[3px] border-green-800 rounded-lg w-[360px] gap-4">
             <div className="flex justify-center items-center">
-              <Image src={sampleImage} className="w-[350px] h-[350px]" />
+              <Image src={sampleImage} className="w-[350px] h-[290px]" />
             </div>
             <div className="px-4 flex flex-col gap-4">
               <div>
@@ -79,7 +79,7 @@ const Category = () => {
           </div>
           <div className="flex flex-col border-[3px] border-green-800 rounded-lg w-[360px] gap-4">
             <div className="flex justify-center items-center">
-              <Image src={sampleImage} className="w-[350px] h-[350px]" />
+              <Image src={sampleImage} className="w-[350px] h-[290px]" />
             </div>
             <div className="px-4 flex flex-col gap-4">
               <div>
@@ -112,7 +112,7 @@ const Category = () => {
           </div>
           <div className="flex flex-col border-[3px] border-green-800 rounded-lg w-[360px] gap-4">
             <div className="flex justify-center items-center">
-              <Image src={sampleImage} className="w-[350px] h-[350px]" />
+              <Image src={sampleImage} className="w-[350px] h-[290px]" />
             </div>
             <div className="px-4 flex flex-col gap-4">
               <div>
