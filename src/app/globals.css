@@ -33,6 +33,8 @@ body {
   }
 }
 
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+
 /* Custom dropdown styles */
 .custom-dropdown .rs-dropdown-toggle {
   background-color: #c6f6d5; /* Tailwind's bg-green-200 */

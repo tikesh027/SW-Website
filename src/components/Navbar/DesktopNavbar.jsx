@@ -11,7 +11,7 @@ import Image from "next/image";
 import logo from "../assets/logo.png";
 import { FaSearch } from "react-icons/fa";
 import "../../app/globals.css";
-import CustomDropdown from "./DropdownComponent";
+import DropdownComponent from "./DropdownComponent";
 
 export default function App() {
   const microbiologyItems = [
@@ -29,7 +29,7 @@ export default function App() {
     { label: "Thermodynamics", href: "" },
     { label: "Electromagnetism", href: "" },
   ];
-  const chemestryItems = [
+  const chemistryItems = [
     { label: "Organic Chemistry", href: "" },
     { label: "Inorganic Chemistry", href: "" },
     { label: "Physical Chemistry", href: "" },
@@ -66,32 +66,15 @@ export default function App() {
           </NavbarContent>
         </Navbar>
       </div>
-      <div className="w-full h-[80px] flex items-center flex-row justify-center bg-green-200">
-        <Navbar className="w-full px-20">
-          <NavbarContent className="flex items-center space-x-4">
-            <NavbarItem>
-              <Button className="text-2xl font-semibold">Home</Button>
-            </NavbarItem>
-            <NavbarItem className="relative">
-              <CustomDropdown
-                title="MICRO-ORGANISMS"
-                items={microbiologyItems}
-              />
-            </NavbarItem>
-            <NavbarItem className="relative">
-              <CustomDropdown title="BIOLOGY" items={biologyItems} />
-            </NavbarItem>
-            <NavbarItem className="relative">
-              <CustomDropdown title="PHYSICS" items={physicsItems} />
-            </NavbarItem>
-            <NavbarItem className="relative">
-              <CustomDropdown title="CHEMISTRY" items={chemestryItems} />
-            </NavbarItem>
-            <NavbarItem className="relative">
-              <CustomDropdown title="MCQ's" items={mcqItems} />
-            </NavbarItem>
-          </NavbarContent>
-        </Navbar>
+      <div className="flex gap-2 bg-green-200 h-[90px] justify-start items-center pl-10">
+        <div className="text-2xl font-semibold p-0">
+          <Button>Home</Button>
+        </div>
+        <DropdownComponent title="MICRO-ORGANISMS" items={microbiologyItems} />
+        <DropdownComponent title="BIOLOGY" items={biologyItems} />
+        <DropdownComponent title="PHYSICS" items={physicsItems} />
+        <DropdownComponent title="CHEMESTRY" items={chemistryItems} />
+        <DropdownComponent title="MCQs" items={mcqItems} />
       </div>
     </div>
   );
