@@ -15,6 +15,7 @@ const Footer = () => {
 
   return (
     <div>
+      <div className="w-full h-[18px] bg-white border-t-4 border-black"></div>
       <div className="bg-[#061a03] h-[550px]">
         <div className="grid grid-cols-4 w-full h-[400px] px-[50px] pt-[30px]">
           <div className="flex flex-col gap-[60px]">
