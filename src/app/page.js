@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar/index";
 import LandingPage from "@/components/LandingPage/LandingPage";
+import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <main>
@@ -12,6 +13,9 @@ export default function Home() {
       </div>
       <div>
         <LandingPage />
+      </div>
+      <div>
+        <Footer />
       </div>
     </main>
   );
