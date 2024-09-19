@@ -1,10 +1,10 @@
+"use client";
 import React from "react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
 } from "@nextui-org/react";
 import Image from "next/image";
@@ -12,6 +12,7 @@ import logo from "../../Assets/logo.png";
 import { FaSearch } from "react-icons/fa";
 import "../../../app/globals.css";
 import DropdownComponent from "./DropdownComponent";
+import Link from "next/link";
 
 export default function App() {
   const microbiologyItems = [
@@ -50,12 +51,12 @@ export default function App() {
           <NavbarContent className="flex justify-end gap-4">
             <NavbarItem>
               <Button as={Link} href="#" className="text-xl text-white">
-                SIGN IN
+                <Link href="/pages/signin">Sign In</Link>
               </Button>
             </NavbarItem>
             <NavbarItem>
               <Button className="bg-[#D1B000] text-black px-5 py-2 text-xl rounded-xl">
-                Subscribe
+                <Link href="/pages/subscription">Subscribe</Link>
               </Button>
             </NavbarItem>
             <NavbarItem>

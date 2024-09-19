@@ -98,12 +98,18 @@ const Footer = () => {
               </Link>
             </div>
             <div>
-              <a href="" className="text-white text-4xl font-semibold">
+              <a
+                href="/pages/privacypolicy"
+                className="text-white text-4xl font-semibold"
+              >
                 Private Policy
               </a>
             </div>
             <div>
-              <a href="" className="text-white text-4xl font-semibold">
+              <a
+                href="/pages/sitemap"
+                className="text-white text-4xl font-semibold"
+              >
                 Site Map
               </a>
             </div>
