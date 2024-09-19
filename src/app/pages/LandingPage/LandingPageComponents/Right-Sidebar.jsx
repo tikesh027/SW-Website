@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Pencil from "../../Assets/pencil.png";
+import Pencil from "../../../Assets/pencil.png";
 import { Button, Input } from "@nextui-org/react";
-import { Dropdown, Item } from "rsuite";
+import Dropdown from "react-bootstrap/Dropdown";
 
 const RightSidebar = () => {
   return (
@@ -44,12 +44,27 @@ const RightSidebar = () => {
       </div>
       <div className="mt-[10px]">
         <div className="w-full h-[300px] bg-green-200 flex justify-evenly p-6">
-          <div className="text-2xl">Latest</div>
+          <div className="text-2xl mt-2">Latest</div>
           <div>
-            <Dropdown title="Categories" className="bg-green-200">
-              <Dropdown.Item className="text-" style={{ width: "200px" }}>
-                <a href="" className="text-black"></a>
-              </Dropdown.Item>
+            <Dropdown>
+              <Dropdown.Toggle
+                variant=""
+                id="dropdown-basic"
+                className="text-2xl bg-green-200 text-black border-none !shadow-none focus:ring-0 focus:outline-none hover:bg-green-300 focus:bg-green-300"
+              >
+                Categories
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="bg-green-200">
+                <Dropdown.Item className="text-[18px] mt-1 hover:bg-green-300 focus:bg-green-300 !px-4 !py-2 w-[260px]">
+                  Sample 1
+                </Dropdown.Item>
+                <Dropdown.Item className="text-[18px] mt-1 hover:bg-green-300 focus:bg-green-300 !px-4 !py-2 w-[260px]">
+                  Sample 2
+                </Dropdown.Item>
+                <Dropdown.Item className="text-[18px] mt-1 hover:bg-green-300 focus:bg-green-300 !px-4 !py-2 w-[260px]">
+                  Sample 3
+                </Dropdown.Item>
+              </Dropdown.Menu>
             </Dropdown>
           </div>
         </div>

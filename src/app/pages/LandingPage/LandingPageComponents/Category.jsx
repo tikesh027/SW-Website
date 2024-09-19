@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import sampleImage from "../../Assets/sampleImage.png";
+import sampleImage from "../../../Assets/sampleImage.png";
 import { Button } from "@nextui-org/react";
 
 const Category = () => {

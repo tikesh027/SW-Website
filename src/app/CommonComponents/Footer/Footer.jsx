@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import logo from "../Assets/logo.png";
+import logo from "../../Assets/logo.png";
 import Dropdown from "react-bootstrap/Dropdown";
+import Link from "next/link";
 
 const Footer = () => {
   // Common classes for dropdown items
@@ -81,14 +82,20 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-10 mt-[50px]">
             <div>
-              <a href="" className="text-white text-4xl font-semibold">
+              <Link
+                href="/pages/aboutus"
+                className="text-white text-4xl font-semibold"
+              >
                 About us
-              </a>
+              </Link>
             </div>
             <div>
-              <a href="" className="text-white text-4xl font-semibold">
-                Contact us
-              </a>
+              <Link
+                href="/pages/contactus"
+                className="text-white text-4xl font-semibold"
+              >
+                Contact Us
+              </Link>
             </div>
             <div>
               <a href="" className="text-white text-4xl font-semibold">
@@ -99,6 +106,11 @@ const Footer = () => {
               <a href="" className="text-white text-4xl font-semibold">
                 Site Map
               </a>
+            </div>
+            <div>
+              <Link href="/" className="text-white text-4xl font-semibold">
+                Home
+              </Link>
             </div>
           </div>
           <div className="mt-[50px]">

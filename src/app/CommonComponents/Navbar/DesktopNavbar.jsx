@@ -8,9 +8,9 @@ import {
   Button,
 } from "@nextui-org/react";
 import Image from "next/image";
-import logo from "../assets/logo.png";
+import logo from "../../Assets/logo.png";
 import { FaSearch } from "react-icons/fa";
-import "../../app/globals.css";
+import "../../../app/globals.css";
 import DropdownComponent from "./DropdownComponent";
 
 export default function App() {

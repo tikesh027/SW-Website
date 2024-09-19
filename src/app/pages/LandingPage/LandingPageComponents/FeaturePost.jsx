@@ -1,5 +1,5 @@
 import React from "react";
-import firstImage from "../../Assets/sampleImage.png";
+import firstImage from "../../../Assets/sampleImage.png";
 import Image from "next/image";
 
 const FeaturePost = () => {

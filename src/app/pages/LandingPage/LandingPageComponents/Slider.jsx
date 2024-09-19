@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
-import StatusImage from "../../Assets/images.jpeg";
+import StatusImage from "../../../Assets/images.jpeg";
 
 const Slider = () => {
   const images = [

@@ -9,7 +9,7 @@ const LandingPage = () => {
   return (
     <div className="w-full h-full">
       <div className="flex items-start">
-        <div className="w-[70%] px-11 py-[80px] border-r-4 border-black">
+        <div className="w-full">
           <div>
             <Category />
           </div>
@@ -22,9 +22,6 @@ const LandingPage = () => {
           <div>
             <FunFacts />
           </div>
-        </div>
-        <div className="w-[30%] p-4 px-10 py-[80px]">
-          <RightSidebar />
         </div>
       </div>
     </div>
