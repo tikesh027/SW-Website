@@ -30,9 +30,10 @@ export default function RootLayout({ children }) {
           </div>
         </header>
         <div className="flex flex-col md:flex-row items-start min-h-screen">
-          <div className="w-full md:w-[70%] px-4 md:px-11 py-[24px] flex-grow min-h-screen !border-r-4 !border-black">
+          <div className="w-full md:w-[70%] px-4 md:px-11 py-[24px] flex-grow min-h-screen md:!border-r-4 md:!border-black !border-0">
             {children}
           </div>
+
           {pathname !== "/pages/posts" && (
             <div className="hidden md:flex w-[30%] p-4 md:px-10 py-[20px] min-h-screen">
               <RightSidebar />

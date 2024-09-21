@@ -160,96 +160,53 @@ const Posts = () => {
       </div>
       <div className="mt-4">
         <h1 className="text-4xl font-semibold">Related Posts</h1>
-        <div className="flex gap-4 mt-4">
-          <div className="p-1 border-2 border-black rounded w-[400px]">
-            <div>
-              <Image src={sampleImage} className="w-[400px] h-[300px]" />
+        <div className="flex flex-col md:flex-row gap-4 mt-4">
+          {[...Array(3)].map((_, index) => (
+            <div
+              key={index}
+              className="p-1 border-2 border-black rounded w-full md:w-[400px]"
+            >
+              <Image
+                src={sampleImage}
+                className="w-full h-[300px] object-cover"
+              />
+              <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
+                <h2 className="text-2xl font-medium">
+                  Some Disorders associated with Respiration
+                </h2>
+                <h2 className="text-xl text-blue-500">
+                  Post by/post date/Category
+                </h2>
+              </div>
             </div>
-            <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
-              <h2 className="text-2xl font-medium">
-                Some Disorders associated with Respiration
-              </h2>
-              <h2 className="text-xl text-blue-500">
-                Post by/post date/Category
-              </h2>
-            </div>
-          </div>
-          <div className="p-1 border-2 border-black rounded w-[400px]">
-            <div>
-              <Image src={sampleImage} className="w-[400px] h-[300px]" />
-            </div>
-            <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
-              <h2 className="text-2xl font-medium">
-                Some Disorders associated with Respiration
-              </h2>
-              <h2 className="text-xl text-blue-500">
-                Post by/post date/Category
-              </h2>
-            </div>
-          </div>
-
-          <div className="p-1 border-2 border-black rounded w-[400px]">
-            <div>
-              <Image src={sampleImage} className="w-[400px] h-[300px]" />
-            </div>
-            <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
-              <h2 className="text-2xl font-medium">
-                Some Disorders associated with Respiration
-              </h2>
-              <h2 className="text-xl text-blue-500">
-                Post by/post date/Category
-              </h2>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="mt-[50px]">
           <div>
-            <h1 className="text-4xl font-semibold">More Post from This Site</h1>
+            <h1 className="text-4xl font-semibold">
+              More Posts from This Site
+            </h1>
           </div>
-          <div className="flex gap-4 mt-4">
-            <div className="p-1 border-2 border-black rounded w-[400px]">
-              <div>
-                <Image src={sampleImage} className="w-[400px] h-[300px]" />
+          <div className="flex flex-col md:flex-row gap-4 mt-4">
+            {[...Array(4)].map((_, index) => (
+              <div
+                key={index}
+                className="p-1 border-2 border-black rounded w-full md:w-[400px]"
+              >
+                <Image
+                  src={sampleImage}
+                  className="w-full h-[300px] object-cover"
+                />
+                <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
+                  <h2 className="text-2xl font-medium">
+                    Some Disorders associated with Respiration
+                  </h2>
+                </div>
               </div>
-              <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
-                <h2 className="text-2xl font-medium">
-                  Some Disorders associated with Respiration
-                </h2>
-              </div>
-            </div>
-            <div className="p-1 border-2 border-black rounded w-[400px]">
-              <div>
-                <Image src={sampleImage} className="w-[400px] h-[300px]" />
-              </div>
-              <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
-                <h2 className="text-2xl font-medium">
-                  Some Disorders associated with Respiration
-                </h2>
-              </div>
-            </div>
-            <div className="p-1 border-2 border-black rounded w-[400px]">
-              <div>
-                <Image src={sampleImage} className="w-[400px] h-[300px]" />
-              </div>
-              <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
-                <h2 className="text-2xl font-medium">
-                  Some Disorders associated with Respiration
-                </h2>
-              </div>
-            </div>
-            <div className="p-1 border-2 border-black rounded w-[400px]">
-              <div>
-                <Image src={sampleImage} className="w-[400px] h-[300px]" />
-              </div>
-              <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
-                <h2 className="text-2xl font-medium">
-                  Some Disorders associated with Respiration
-                </h2>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-        <div className="mx-[15%] mt-[100px]">
+        <div className="mx-10 md:mx-[15%] mt-[100px]">
           <div>
             <h1 className="text-5xl font-semibold">Leave a Comment</h1>
           </div>
@@ -272,7 +229,7 @@ const Posts = () => {
                   placeholder="Type your Comment here...."
                 />
               </Form.Group>
-              <div className="flex gap-4 mb-4">
+              <div className="flex flex-col md:flex-row gap-4 mb-4">
                 <Form.Group className="flex-1" controlId="formBasicName">
                   <Form.Control
                     type="text"
@@ -294,7 +251,7 @@ const Posts = () => {
                   className="mr-2"
                 />
                 <span className="text-black text-sm">
-                  Save my name, and email for next time
+                  Save my name and email for next time
                 </span>
               </div>
               <Button
