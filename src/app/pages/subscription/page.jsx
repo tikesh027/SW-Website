@@ -24,7 +24,7 @@ const Subscription = () => {
   };
 
   return (
-    <div className="px-4 sm:px-10 md:px-[100px]">
+    <div className="px-10 sm:px-10 md:px-[100px]">
       <div className="text-3xl sm:text-4xl md:text-5xl font-semibold mt-5 md:mt-[20px]">
         Subscribe
       </div>
