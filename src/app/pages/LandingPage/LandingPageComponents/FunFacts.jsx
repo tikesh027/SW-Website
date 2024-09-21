@@ -10,38 +10,30 @@ const FunFacts = () => {
         <div>
           <h1 className="text-5xl font-semibold">Fun Facts</h1>
         </div>
-        <div className="mt-6 flex gap-3 ">
+        <div className="mt-6 flex justify-start flex-wrap gap-3">
           <iframe
-            src="https://www.youtube.com/embed/9c6W4CCU9M4" // Replace with a random wildlife video URL
-            width="330"
-            height="220"
-            style={{ border: "none" }}
+            src="https://www.youtube.com/embed/9c6W4CCU9M4"
+            className="w-full sm:w-1/3 md:w-1/3 lg:w-1/4 h-[220px] border-none"
             title="Random Wildlife Video"
             allowFullScreen
           ></iframe>
           <iframe
-            src="https://www.youtube.com/embed/9c6W4CCU9M4" // Replace with a random wildlife video URL
-            width="330"
-            height="220"
-            style={{ border: "none" }}
+            src="https://www.youtube.com/embed/9c6W4CCU9M4"
+            className="w-full sm:w-1/3 md:w-1/3 lg:w-1/4 h-[220px] border-none"
             title="Random Wildlife Video"
             allowFullScreen
           ></iframe>
           <iframe
-            src="https://www.youtube.com/embed/9c6W4CCU9M4" // Replace with a random wildlife video URL
-            width="330"
-            height="220"
-            style={{ border: "none" }}
+            src="https://www.youtube.com/embed/9c6W4CCU9M4"
+            className="w-full sm:w-1/3 md:w-1/3 lg:w-1/4 h-[220px] border-none"
             title="Random Wildlife Video"
             allowFullScreen
           ></iframe>
-          <div className="flex justify-center items-center">
-            <h1>
-              <a href="#" className="text-xl text-blue-500">
-                View More
-              </a>
-            </h1>
-          </div>
+          <h1 className="w-full md:w-auto flex justify-start md:justify-center items-center mt-4">
+            <a href="#" className="text-xl text-blue-500">
+              View More
+            </a>
+          </h1>
         </div>
       </div>
     </div>

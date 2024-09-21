@@ -29,18 +29,14 @@ export default function RootLayout({ children }) {
             <Navbar />
           </div>
         </header>
-        <div className="flex items-start min-h-screen">
-          <div className="w-[70%] px-11 py-[24px] flex-grow min-h-screen">
+        <div className="flex flex-col md:flex-row items-start min-h-screen">
+          <div className="w-full md:w-[70%] px-4 md:px-11 py-[24px] flex-grow min-h-screen !border-r-4 !border-black">
             {children}
           </div>
-          {/* Conditionally render RightSidebar */}
           {pathname !== "/pages/posts" && (
-            <>
-              <div className="min-h-screen border-r-4 border-black flex-grow-0 flex-shrink-0"></div>
-              <div className="w-[30%] p-4 px-10 py-[80px] min-h-screen">
-                <RightSidebar />
-              </div>
-            </>
+            <div className="hidden md:flex w-[30%] p-4 md:px-10 py-[20px] min-h-screen">
+              <RightSidebar />
+            </div>
           )}
         </div>
 

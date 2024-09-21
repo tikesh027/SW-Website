@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { FaBars, FaSearch, FaTimes } from 'react-icons/fa';
-import Link from 'next/link';
+import React, { useState } from "react";
+import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "../../Assets/logo.png";
 
 const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,24 +23,27 @@ const MobileNavbar = () => {
 
   return (
     <nav className="flex justify-between items-center p-4 bg-green-700 text-white fixed top-0 left-0 w-full z-50">
-      <div className="md:hidden" onClick={toggleMenu}>
-        <FaBars className="cursor-pointer" />
-      </div>
+      <div className="flex justify-around items-center w-full">
+        <div className="md:hidden" onClick={toggleMenu}>
+          <FaBars className="cursor-pointer" />
+        </div>
 
-      <div className="flex-grow text-center">
-        <Link href="/" legacyBehavior>
-          <a>
-            <img src="/logo.png" alt="Logo" className="h-8 mx-auto" />
-          </a>
-        </Link>
-      </div>
+        <div className="flex-grow text-center flex justify-center">
+          <Link href="/" legacyBehavior>
+            <a>
+              <Image src={Logo} alt="Logo" className="w-10 h-10" />
+            </a>
+          </Link>
+        </div>
 
-      <div className="flex items-center space-x-4">
-        <FaSearch className="cursor-pointer" />
+        <div className="flex items-center space-x-4">
+          <FaSearch className="cursor-pointer" />
+        </div>
       </div>
-
       <div
-        className={`transform top-0 left-0 h-screen w-full bg-green-700 fixed z-40 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`transform top-0 left-0 h-screen w-full bg-green-700 fixed z-40 transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
         <div className="flex justify-between items-center p-4">
           <FaTimes className="cursor-pointer text-white" onClick={closeMenu} />
@@ -50,7 +55,7 @@ const MobileNavbar = () => {
               className="flex items-center justify-between cursor-pointer w-full"
             >
               <span>Micro-Organisms</span>
-              <span>{dropdownOpen === 0 ? '-' : '+'}</span>
+              <span>{dropdownOpen === 0 ? "-" : "+"}</span>
             </div>
             {dropdownOpen === 0 && (
               <ul className="pl-4 mt-2 space-y-2">
@@ -79,7 +84,7 @@ const MobileNavbar = () => {
               className="flex items-center justify-between cursor-pointer w-full"
             >
               <span>Biology</span>
-              <span>{dropdownOpen === 1 ? '-' : '+'}</span>
+              <span>{dropdownOpen === 1 ? "-" : "+"}</span>
             </div>
             {dropdownOpen === 1 && (
               <ul className="pl-4 mt-2 space-y-2">
@@ -108,7 +113,7 @@ const MobileNavbar = () => {
               className="flex items-center justify-between cursor-pointer w-full"
             >
               <span>Physics</span>
-              <span>{dropdownOpen === 2 ? '-' : '+'}</span>
+              <span>{dropdownOpen === 2 ? "-" : "+"}</span>
             </div>
             {dropdownOpen === 2 && (
               <ul className="pl-4 mt-2 space-y-2">
@@ -137,7 +142,7 @@ const MobileNavbar = () => {
               className="flex items-center justify-between cursor-pointer w-full"
             >
               <span>Chemistry</span>
-              <span>{dropdownOpen === 3 ? '-' : '+'}</span>
+              <span>{dropdownOpen === 3 ? "-" : "+"}</span>
             </div>
             {dropdownOpen === 3 && (
               <ul className="pl-4 mt-2 space-y-2">
@@ -166,7 +171,7 @@ const MobileNavbar = () => {
               className="flex items-center justify-between cursor-pointer w-full"
             >
               <span>MCQs</span>
-              <span>{dropdownOpen === 4 ? '-' : '+'}</span>
+              <span>{dropdownOpen === 4 ? "-" : "+"}</span>
             </div>
             {dropdownOpen === 4 && (
               <ul className="pl-4 mt-2 space-y-2">

@@ -42,9 +42,9 @@ export default function App() {
   ];
 
   return (
-    <div className="bg-green-600 h-[200px] flex flex-col">
-      <div className="flex h-[120px] justify-center items-center">
-        <Navbar className="px-10">
+    <div className="bg-green-600 h-auto flex flex-col">
+      <div className="flex h-auto justify-center items-center">
+        <Navbar className="w-full px-4 md:px-10">
           <NavbarBrand>
             <Image src={logo} className="w-[80px] h-[80px] p-2" />
           </NavbarBrand>
@@ -67,14 +67,14 @@ export default function App() {
           </NavbarContent>
         </Navbar>
       </div>
-      <div className="flex gap-2 bg-green-200 h-[90px] justify-start items-center pl-10">
+      <div className="flex gap-2 bg-green-200 h-auto justify-start items-center px-4 md:px-10 flex-wrap">
         <div className="text-2xl font-semibold p-0">
-          <Button>Home</Button>
+          <Button className="whitespace-nowrap">Home</Button>
         </div>
         <DropdownComponent title="MICRO-ORGANISMS" items={microbiologyItems} />
         <DropdownComponent title="BIOLOGY" items={biologyItems} />
         <DropdownComponent title="PHYSICS" items={physicsItems} />
-        <DropdownComponent title="CHEMESTRY" items={chemistryItems} />
+        <DropdownComponent title="CHEMISTRY" items={chemistryItems} />
         <DropdownComponent title="MCQs" items={mcqItems} />
       </div>
     </div>
