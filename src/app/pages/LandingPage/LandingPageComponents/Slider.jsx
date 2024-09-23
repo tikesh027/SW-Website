@@ -34,7 +34,7 @@ const Slider = () => {
             className="relative"
             breakpoints={{
               640: {
-                slidesPerView: 1, // 1 slide on small screens
+                slidesPerView: 3, // 1 slide on small screens
               },
               768: {
                 slidesPerView: 3, // 3 slides on medium screens
