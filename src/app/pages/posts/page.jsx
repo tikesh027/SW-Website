@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import sampleImage from "../../Assets/sampleimage.png";
+import sampleImage from "../../Assets/sampleImage.png";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
