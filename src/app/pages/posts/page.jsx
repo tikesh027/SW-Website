@@ -169,6 +169,7 @@ const Posts = () => {
               <Image
                 src={sampleImage}
                 className="w-full h-[300px] object-cover"
+                alt="Sample Image"
               />
               <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
                 <h2 className="text-2xl font-medium">
@@ -196,6 +197,7 @@ const Posts = () => {
                 <Image
                   src={sampleImage}
                   className="w-full h-[300px] object-cover"
+                  alt="Sample Image"
                 />
                 <div className="px-2 flex flex-col gap-2 mt-2 mb-2">
                   <h2 className="text-2xl font-medium">

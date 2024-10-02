@@ -30,9 +30,7 @@ const MobileNavbar = () => {
 
         <div className="flex-grow text-center flex justify-center">
           <Link href="/" legacyBehavior>
-            <a>
-              <Image src={Logo} alt="Logo" className="w-10 h-10" />
-            </a>
+            <Image src={Logo} alt="Logo" className="w-10 h-10" />
           </Link>
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import sampleImage from "../../Assets/sampleimage.png";
+import sampleImage from "../../Assets/sampleImage.png";
 import Button from "react-bootstrap/Button";
 
 const BlogFormat = () => {

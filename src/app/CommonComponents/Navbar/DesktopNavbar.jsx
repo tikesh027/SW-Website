@@ -47,7 +47,7 @@ export default function App() {
         <Navbar className="w-full px-4 md:px-10">
           <NavbarBrand>
             <Link href="/">
-              <Image src={logo} className="w-[80px] h-[80px] p-2" />
+              <Image src={logo} alt="Logo" className="w-[80px] h-[80px] p-2" />
             </Link>
           </NavbarBrand>
           <NavbarContent className="flex justify-end gap-4">
