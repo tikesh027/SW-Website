@@ -8,7 +8,7 @@ const FunFacts = () => {
       </div>
       <div>
         <div>
-          <h1 className="text-5xl font-semibold">Fun Facts</h1>
+          <h1 className="text-3xl font-semibold">Fun Facts</h1>
         </div>
         <div className="mt-6 flex justify-start flex-wrap gap-3">
           <iframe

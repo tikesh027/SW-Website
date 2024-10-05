@@ -24,23 +24,26 @@ const Slider = () => {
         AD
       </div>
       <div>
-        <div className="text-5xl font-semibold">Web Stories</div>
+        <div className="text-3xl font-semibold">Web Stories</div>
         <div className="mt-4 mb-[100px]">
           <Swiper
-            spaceBetween={20} // Space between slides
+            spaceBetween={5} // Space between slides
             navigation={true}
             pagination={false}
             modules={[Navigation]}
             className="relative"
             breakpoints={{
+              320: {
+                slidesPerView: 3, // Display 3 slides on small screens
+              },
               640: {
-                slidesPerView: 3, // 1 slide on small screens
+                slidesPerView: 3,
               },
               768: {
-                slidesPerView: 3, // 3 slides on medium screens
+                slidesPerView: 3,
               },
               1024: {
-                slidesPerView: 5, // 5 slides on large screens
+                slidesPerView: 5,
               },
             }}
           >
