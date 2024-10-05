@@ -1,7 +1,7 @@
 import LandingPage from "@/app/pages/LandingPage/LandingPage";
 export default function Home() {
   return (
-    <main>
+    <main className="bg-white">
       <div>
         <LandingPage />
       </div>

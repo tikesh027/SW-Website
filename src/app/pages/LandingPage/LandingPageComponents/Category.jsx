@@ -79,7 +79,7 @@ const Category = () => {
                 <div className="flex justify-center sm:justify-start">
                   <Button
                     auto
-                    className="bg-gray-300 w-full text-black font-semibold px-4 py-2 md:px-8 md:py-3 sm:px-2 sm:py-1"
+                    className="bg-gray-300 w-[300px] text-black font-semibold px-4 py-2 md:px-8 md:py-3 sm:px-2 sm:py-1"
                   >
                     READ MORE...
                   </Button>
